@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="app.js" defer></script>
+    <script src="route.js" defer></script>
   </head>
   <body>
     <header>
@@ -18,11 +18,10 @@
     </header>
     <section id="user-goal">
       <h2>My Course Goal</h2>
-      <p>{{ courseGoal }}</p>
-      <!--INTERPOLATION-->
+      <p>{{ courseGoal }}</p>  <!--INTERPOLATION-->
       <p>{{ outputGoal() }}</p>
       <p>{{ 1 + 1 }}</p>
-      <p>Learn more <a :href="vueLink">About Vue</a>.</p>
+      <p>Learn more <a v-bind:href="vueLink">About Vue</a>.</p>
     </section>
     <!-- <section id="user-goal">
       <h2>About The Course</h2>

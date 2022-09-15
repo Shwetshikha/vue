@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="eventbinding.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <!-- <script src="app.js" defer></script> -->
+    <script src="eventbinding.js" defer></script>
+    <title>Event Binding</title>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Events</h1>
+    </header>
+    <!-- <section id="events">
+        <h2>Events in Action</h2>
+        <button v-on:click="counter++">Add</button>
+        <button v-on:click="counter--">Remove</button>
+        <p>Result: {{ counter }}</p>
+
+    </section> -->
+    <!-- <section id="events">
+        <h2>Events in Action</h2>
+        <button v-on:click="add">Add</button>
+        <button v-on:click="counter = counter + 1">Reduce</button>
+        <p>Result: {{ counter }}</p>
+
+    </section> -->
+    <!-- <section id="events">
+        <h2>Events in Action</h2>
+        <button v-on:click="add">Add</button>
+        <button v-on:click="reduce">Reduce</button>
+        <p>Result: {{ counter }}</p>
+    </section> -->
+
+    <!-- <section id="events">
+      <h2>Events in action</h2>
+      <button v-on:click="add(10)">Click to Add FIVE</button>
+      <button v-on:click="reduce(5)">Click to reduce FIVE</button>
+      <p>Result: {{ counter }}</p>
+    </section> -->
+
+    <!--USING THE NATIVE EVENT OBJECTS-->
+    <!-- <section id="events">
+      <h2>Events in action</h2>
+      <button v-on:click="add(10)">Click to Add FIVE</button>
+      <button v-on:click="reduce(5)">Click to reduce FIVE</button>
+      <p>Result: {{ counter }}</p>
+      <input type="text" v-on:input="setName" />
+      <p>Your Name: {{ name }}</p>
+    </section> -->
+
+    <!-- NOT POINTING AT METHOD-->
+    <!-- <section id="events">
+      <h2>Events in action</h2>
+      <button v-on:click="add(10)">Click to Add FIVE</button>
+      <button v-on:click="reduce(5)">Click to reduce FIVE</button>
+      <p>Result: {{ counter }}</p>
+      <input type="text" v-on:input="setName($event, 'Shikha')" />
+      <p>Your Name: {{ name }}</p>
+    </section> -->
+
+    <!-- EXPLORING EVENT MODIFIERS LECTURE 25 AND 26 (V-ONCE)-->
+    <!-- <section id="events">
+      <h2>Events in action</h2>
+      <button v-on:click="add(10)">Click to Add TEN</button>
+      <button v-on:click.right="reduce(5)">Click to reduce FIVE</button>
+      <p v-once>Starting Counter: {{ counter }}</p>
+      <p>Result: {{ counter }}</p>
+
+      <input
+        type="text"
+        v-on:input="setName($event, 'Shikha')"
+        v-on:keyup.enter="confirmInput"
+      />
+      <p>Your Name: {{ confirmedName }}</p>
+      <form v-on:submit.prevent="submitForm">
+        <input type="text" />
+        <button>Sign Up</button>
+      </form>
+    </section> -->
+
+    <!-- LECTURE 27 DATA BINDING AND EVENT BINDING = TWO-WAY BINDING-->
+    <!-- <section id="events">
+      <h2>EVENTS IN ACTION</h2>
+      <button v-on:click="add(10)">Add Ten</button>
+      <button v-on:click="reduce(5)">Subtract Five</button>
+      <p>Result: {{ counter }}</p>
+      <input type="text" v-model="name" />
+      <button v-on:click="resetInput">Reset Input</button>
+      <p>Your Name: {{ name }}</p>
+    </section> -->
+
+    <!--LECTURE 28 METHODS USED FOR DATA BINDING : HOW IT WORKS-->
+    <!-- <section id="events">
+      <h2>EVENTS IN ACTION</h2>
+      <button v-on:click="add(10)">Add Ten</button>
+      <button v-on:click="reduce(5)">Subtract Five</button>
+      <p>Result: {{ counter }}</p>
+      <input type="text" v-model="name" />
+      <button v-on:click="resetInput">Reset Input</button>
+      <p>Your Name: {{ outputFullname() }}</p>
+    </section> -->
+
+    <!--LECTURE 29 INTRODUCING COMPUTED PROPERTIES-->
+    <!-- <section id="events">
+      <h2>EVENTS IN ACTION</h2>
+      <button v-on:click="add(10)">Add Ten</button>
+      <button v-on:click="reduce(5)">Subtract Five</button>
+      <p>Result: {{ counter }}</p>
+      <input type="text" v-model="name" />
+      <button v-on:click="resetInput">Reset Input</button>
+      <p>Your Name: {{ outputFullname() }}</p>
+    </section> -->
+
+    <!--LECTURE 30 WATCHERS-->
+    <!-- <section id="events">
+      <h2>EVENTS IN ACTION</h2>
+      <button v-on:click="add(10)">Add Ten</button>
+      <button v-on:click="reduce(5)">Subtract Five</button>
+      <p>Result: {{ counter }}</p>
+      <input type="text" v-model="name" />
+      <input type="text" v-model="lastName" />
+      <button v-on:click="resetInput">Reset Input</button>
+      <p>Your Name: {{ fullName }}</p>
+    </section> -->
+
+    <!--LECTURE 31 METHODS VS COMPUTED VS WATCH-->
+
+    <!--LECTURE 32- V-BIND AND V-ON SHORTHAND
+    USE ':value' in place of 'v-bind:value'
+    USE '@click' in place of 'v-on: click'-->
+
+    <!--LECTURE 33 DYNAMIC STYLING WITH INLINE STYLES-->
+  </body>
+</html>
