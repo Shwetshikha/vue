@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Course Goals</h1>
+    </header>
+    <!-- LECTURE 39 MODULE INTRODUCTION 
+         LECTURE 40 UNDERSTANDING THE PROBLEM
+ 
+
+    <section id="user-goals">
+      <h2>My course goals</h2>
+      <input type="text" />
+      <button>Add Goal</button>
+      <p v-if="goals.length === 0">
+        No goals have been added yet - please start adding some!
+      </p>
+      <ul>
+        <li>Goal</li>
+      </ul>
+    </section>
+
+        LECTURE 41 RENDERING CONTENT CONDITIONALLY-->
+
+    <!-- <section id="user-goals">
+      <h2>My course goals</h2>
+      <input type="text" v-model="enteredGoalValue" />
+      <button @click="addGoal">Add Goal</button>
+      <p v-if="goals.length === 0">
+        No goals have been added yet - please start adding some!
+      </p>
+      <ul>
+        <li>Goal</li>
+      </ul>
+    </section> -->
+    <!-- LECTURE 42 V-IF, V-ELSE AND V-ELSE-IF-->
+    <!-- <section id="user-goals">
+      <h2>My course goals</h2>
+      <input type="text" v-model="enteredGoalValue" />
+      <button @click="addGoal">Add Goal</button>
+      <p v-if="goals.length === 0">
+        No goals have been added yet - please start adding some!
+      </p>
+      <ul v-else-if="goals.length > 0">
+        <li>Goal</li>
+      </ul>
+    </section> -->
+    <!--LECTURE 43 Using v-show Instead Of v-if-->
+    <!-- <section id="user-goals">
+      <h2>My course goals</h2>
+      <input type="text" v-model="enteredGoalValue" />
+      <button @click="addGoal">Add Goal</button>
+      <p v-show="goals.length === 0">
+        No goals have been added yet - please start adding some!
+      </p>
+      <ul v-show="goals.length > 0">
+        <li>Goal</li>
+      </ul>
+    </section> -->
+
+    <!--LECTURE-44 RENDERING LISTS OF DATA -->
+    <!-- <section id="user-goals">
+      <h2>My course goals</h2>
+      <input type="text" v-model="enteredGoalValue" />
+      <button @click="addGoal">Add Goal</button>
+      <p v-if="goals.length === 0">
+        No goals have been added yet - please start adding some!
+      </p>
+      <ul v-else>
+        <li v-for="goal in goals">{{ goal }}</li>
+        goal should be same in {{}} also its scope is limited to li coontent here -->
+    <!-- </ul>
+    </section> -->
+
+    <!--LECTURE 45 DIVING DEEPER INTO V-FOR-->
+
+    <!-- <section id="user-goals">
+      <h2>My course goals</h2>
+      <input type="text" v-model="enteredGoalValue" />
+      <button @click="addGoal">Add Goal</button>
+      <p v-if="goals.length === 0">
+        No goals have been added yet - please start adding some!
+      </p>
+      <ul v-else>
+        <li v-for="(goal, index) in goals">{{ goal }} - {{ index }}</li>
+      </ul>
+      <ul>
+        <li v-for="(value, key, index) in {name: 'Max', age: 31}">
+          {{ key }}: {{ value }}
+        </li>
+      </ul>
+      <ul>
+        <li v-for="num in 10">{{ num }}</li>></li>
+      </ul>
+    </section> -->
+    <!-- LECTURE 46 REMOVING LIST ITEMS-->
+    <!-- <section id="user-goals">
+      <h2>My course goals</h2>
+      <input type="text" v-model="enteredGoalValue" />
+      <button @click="addGoal">Add Goal</button>
+      <p v-if="goals.length === 0">
+        No goals have been added yet - please start adding some!
+      </p>
+      <ul v-else>
+        <li v-for="(goal, index) in goals" @click="removeGoal(index)">
+          {{ goal }} - {{ index }}
+        </li>
+      </ul>
+      <ul>
+        <li v-for="(value, key, index) in {name: 'Max', age: 31}">
+          {{ key }}: {{ value }}
+        </li>
+      </ul>
+    </section> -->
+    <!--LECTURE 47 LISTS AND KEYS-->
+    <section id="user-goals">
+      <h2>My course goals</h2>
+      <input type="text" v-model="enteredGoalValue" />
+      <button @click="addGoal">Add Goal</button>
+      <p v-if="goals.length === 0">
+        No goals have been added yet - please start adding some!
+      </p>
+      <ul v-else>
+        <li
+          v-for="(goal, index) in goals"
+          :key="goal"
+          @click="removeGoal(index)"
+        >
+          <p>{{ goal }} - {{ index }}</p>
+          <input type="text" @click.stop />
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
